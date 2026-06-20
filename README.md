@@ -1,3 +1,5 @@
+<p align="center"><img src="https://raw.githubusercontent.com/go-virtio/brand/main/social/go-virtio-net.png" alt="go-virtio/net" width="720"></p>
+
 # go-virtio/net
 
 Pure-Go virtio-net driver targeting the `go-virtio/common` transport
