@@ -2,6 +2,10 @@
 
 # go-virtio/net
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/go-virtio/net.svg)](https://pkg.go.dev/github.com/go-virtio/net)
+[![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![CI](https://github.com/go-virtio/net/actions/workflows/ci.yml/badge.svg)](https://github.com/go-virtio/net/actions/workflows/ci.yml)
+
 Pure-Go virtio-net driver targeting the `go-virtio/common` transport
 interfaces. Implements the modern-transport (Virtio 1.0+) init sequence
 and split-virtqueue TX/RX path for the standard PCI-bound virtio-net
