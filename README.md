@@ -43,7 +43,11 @@ frame, err := vn.ReceiveFrame(10000) // poll budget
     — transport-agnostic infrastructure (PCI cap walker, modern config
     layout, split-virtqueue impl, transport interfaces).
   - [`github.com/go-virtio/blk`](https://github.com/go-virtio/blk) —
-    placeholder for a future pure-Go virtio-blk driver.
+    pure-Go virtio-blk (block device) driver.
+  - [`github.com/go-virtio/rng`](https://github.com/go-virtio/rng) —
+    pure-Go virtio-rng (entropy) driver.
+  - [`github.com/go-virtio/vsock`](https://github.com/go-virtio/vsock) —
+    pure-Go virtio-vsock driver.
 
 ## License
 
