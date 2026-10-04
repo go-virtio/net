@@ -17,7 +17,7 @@ import (
 // frame). This drives the ReceiveFrame happy path.
 type rxFakeDevice struct {
 	*fakeDevice
-	rxMu        sync.Mutex
+	rxMu           sync.Mutex
 	rxFramesNeeded int
 }
 
@@ -220,9 +220,9 @@ func (z *zeroPhysWrap) transmitWithZero(frame []byte) error {
 
 type zeroPhysTransport struct{ base *fakeDevice }
 
-func (z zeroPhysTransport) ReadConfig8(o uint8) (uint8, error)   { return z.base.ReadConfig8(o) }
-func (z zeroPhysTransport) ReadConfig16(o uint8) (uint16, error) { return z.base.ReadConfig16(o) }
-func (z zeroPhysTransport) ReadConfig32(o uint8) (uint32, error) { return z.base.ReadConfig32(o) }
+func (z zeroPhysTransport) ReadConfig8(o uint8) (uint8, error)     { return z.base.ReadConfig8(o) }
+func (z zeroPhysTransport) ReadConfig16(o uint8) (uint16, error)   { return z.base.ReadConfig16(o) }
+func (z zeroPhysTransport) ReadConfig32(o uint8) (uint32, error)   { return z.base.ReadConfig32(o) }
 func (z zeroPhysTransport) Read8(b uint8, o uint64) (uint8, error) { return z.base.Read8(b, o) }
 func (z zeroPhysTransport) Read16(b uint8, o uint64) (uint16, error) {
 	return z.base.Read16(b, o)

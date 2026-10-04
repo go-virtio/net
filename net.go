@@ -76,15 +76,15 @@ type VirtioNet struct {
 
 // OpenVirtioNet drives the full bring-up of one virtio-net device:
 //
-//   1. Verify the PCI VID:DID is 1AF4:1041 (modern net).
-//   2. InitModernConfig walks PCI caps + populates the BAR locators.
-//   3. Reset → ACK → DRIVER status progression.
-//   4. Read DeviceFeature, mask, write DriverFeature.
-//   5. Set FEATURES_OK, verify it stuck.
-//   6. Allocate + publish rxq (queue 0) + txq (queue 1).
-//   7. DRIVER_OK status.
-//   8. Read MAC from DeviceCfg.
-//   9. Pre-post RxRingSize receive buffers + notify the device.
+//  1. Verify the PCI VID:DID is 1AF4:1041 (modern net).
+//  2. InitModernConfig walks PCI caps + populates the BAR locators.
+//  3. Reset → ACK → DRIVER status progression.
+//  4. Read DeviceFeature, mask, write DriverFeature.
+//  5. Set FEATURES_OK, verify it stuck.
+//  6. Allocate + publish rxq (queue 0) + txq (queue 1).
+//  7. DRIVER_OK status.
+//  8. Read MAC from DeviceCfg.
+//  9. Pre-post RxRingSize receive buffers + notify the device.
 //
 // On success the device is in DRIVER_OK state, the rxq is pre-posted
 // with RxRingSize buffers, the txq is empty + ready, and the device

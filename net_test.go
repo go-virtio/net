@@ -130,7 +130,6 @@ func (d *fakeDevice) AllocatePages(count int) (uint64, []byte, error) {
 	return uint64(addr), mem, nil
 }
 
-
 // BARMemoryAccessor: routes accesses with awareness of which CommonCfg
 // register is being touched.
 func (d *fakeDevice) commonCfgBAR() uint8     { return 0 }
@@ -387,8 +386,8 @@ func buildVirtioNetCfgSpace() []byte {
 	cfg[0x41] = 0x50 // next
 	cfg[0x42] = 16   // cap_len
 	cfg[0x43] = common.PCICapCommonCfg
-	cfg[0x44] = 0    // bar
-	cfg[0x45] = 0    // id
+	cfg[0x44] = 0                                   // bar
+	cfg[0x45] = 0                                   // id
 	binary.LittleEndian.PutUint32(cfg[0x48:], 0)    // offset
 	binary.LittleEndian.PutUint32(cfg[0x4C:], 0x38) // length
 
