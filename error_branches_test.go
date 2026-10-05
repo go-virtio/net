@@ -37,13 +37,13 @@ type tapTransport struct {
 
 	// BARMemoryAccessor hooks: each (bar, off) target fires once. The
 	// "Once" sentinel guards against firing on multiple calls.
-	failOnRead8     *barTarget
-	failOnRead16    *barTarget
-	failOnRead32    *barTarget
-	failOnWrite8    *barTarget
-	failOnWrite16   *barTarget
-	failOnWrite32   *barTarget
-	failOnWrite64   *barTarget
+	failOnRead8   *barTarget
+	failOnRead16  *barTarget
+	failOnRead32  *barTarget
+	failOnWrite8  *barTarget
+	failOnWrite16 *barTarget
+	failOnWrite32 *barTarget
+	failOnWrite64 *barTarget
 
 	// PageAllocator: nth (1-indexed) call returns err. After firing once
 	// (or if 0), normal path.

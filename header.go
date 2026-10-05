@@ -22,14 +22,14 @@
 //   - Virtio 1.1 §5.1   "Network Device" — device-type 1 binding.
 //   - Virtio 1.1 §5.1.3 "Feature bits" — VIRTIO_NET_F_*.
 //   - Virtio 1.1 §5.1.4 "Device configuration layout" — MAC, status,
-//                       max_virtqueue_pairs, MTU.
+//     max_virtqueue_pairs, MTU.
 //   - Virtio 1.1 §5.1.6 "Device Operation" — the per-frame
-//                       struct virtio_net_hdr.
+//     struct virtio_net_hdr.
 //   - Virtio 1.1 §3.1.1 "Driver Requirements: Device Initialization"
-//                       — the status-bit choreography in OpenVirtioNet.
+//     — the status-bit choreography in OpenVirtioNet.
 //   - Linux drivers/net/virtio_net.c — canonical Go-translatable
-//                       reference for the init sequence and rxq pre-post
-//                       pattern.
+//     reference for the init sequence and rxq pre-post
+//     pattern.
 package net
 
 // VirtioNetHdrSize is the on-the-wire byte length of `struct
@@ -126,10 +126,10 @@ const (
 //	    // ... 1.1 additions
 //	};
 const (
-	CfgOffsetMAC                uint32 = 0
-	CfgOffsetStatus             uint32 = 6
-	CfgOffsetMaxVirtqueuePairs  uint32 = 8
-	CfgOffsetMTU                uint32 = 10
+	CfgOffsetMAC               uint32 = 0
+	CfgOffsetStatus            uint32 = 6
+	CfgOffsetMaxVirtqueuePairs uint32 = 8
+	CfgOffsetMTU               uint32 = 10
 )
 
 // MACLen is the byte length of the virtio-net MAC field (Virtio 1.1
